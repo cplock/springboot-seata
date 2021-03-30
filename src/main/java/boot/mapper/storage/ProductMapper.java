@@ -2,6 +2,8 @@ package boot.mapper.storage;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.context.annotation.DependsOn;
 
 /**
@@ -15,6 +17,7 @@ public interface ProductMapper {
      * @param productId 商品 ID
      * @return 库存
      */
+    @Select("SELECT stock FROM product WHERE id = #{productId}\n")
     Integer getStock(@Param("productId") Long productId);
 
 
@@ -25,5 +28,6 @@ public interface ProductMapper {
      * @param amount    扣减数量
      * @return 影响记录行数
      */
+    @Update("UPDATE product SET stock = stock - #{amount} WHERE id = #{productId}\n")
     Integer reduceStock(@Param("productId") Long productId, @Param("amount") Integer amount);
 }

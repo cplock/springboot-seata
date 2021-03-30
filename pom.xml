@@ -158,16 +158,6 @@
             <resource>
                 <directory>src/main/resources/common</directory>
             </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>mybatis/ordermapper/*.xml</include>
-                    <include>mybatis/paymapper/*.xml</include>
-                    <include>mybatis/storagemapper/*.xml</include>
-                    <include>mybatis/*.xml</include>
-                </includes>
-                <filtering>true</filtering>
-            </resource>
         </resources>
 
         <plugins>

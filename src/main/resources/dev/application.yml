@@ -1,0 +1,31 @@
+#logging:
+#  level: debug
+#
+#spring:
+#  application:
+#    name: springboot-seata
+#  datasource:
+#    pay:
+#      url: jdbc:mysql://118.24.203.63:3306/seata_pay?useUnicode=true&characterEncoding=UTF-8
+#      username: root
+#      password: root
+#      driver-class-name: com.mysql.jdbc.Driver
+#    storage:
+#      url: jdbc:mysql://118.24.203.63:3306/seata_storage?useUnicode=true&characterEncoding=UTF-8
+#      username: root
+#      password: root
+#      driver-class-name: com.mysql.jdbc.Driver
+#    order:
+#      url: jdbc:mysql://118.24.203.63:3306/seata_order?useUnicode=true&characterEncoding=UTF-8
+#      username: root
+#      password: root
+#      driver-class-name: com.mysql.jdbc.Driver
+#  cloud:
+#    alibaba:
+#      seata:
+#        tx-service-group: springboot-seata
+#
+#server:
+#  port: 8083
+#
+#

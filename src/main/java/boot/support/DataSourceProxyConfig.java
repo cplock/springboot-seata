@@ -80,7 +80,7 @@ public class DataSourceProxyConfig {
     public SqlSessionFactoryBean sqlSessionFactoryBean(@Qualifier("dynamicDataSource") DataSource dataSource) {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
-        sqlSessionFactoryBean.setConfigLocation(new PathMatchingResourcePatternResolver().getResource("classpath:mybatis/mybatis.xml"));
+        //sqlSessionFactoryBean.setConfigLocation(Configuration);
         return sqlSessionFactoryBean;
     }
 }

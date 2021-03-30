@@ -18,6 +18,7 @@ public interface AccountMapper {
      * @param userId 用户 ID
      * @return 账户余额
      */
+    @Select("SELECT balance FROM account WHERE id = #{userId}\n")
     Integer getBalance(@Param("userId") Long userId);
 
     /**
@@ -26,5 +27,6 @@ public interface AccountMapper {
      * @param price 需要扣减的数目
      * @return 影响记录行数
      */
+    @Update("UPDATE account SET balance = balance - #{price} WHERE id = 1\n")
     Integer reduceBalance(@Param("price") Integer price);
 }
